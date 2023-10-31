@@ -1,0 +1,18 @@
+const event = new Promise((resolve, reject) => {
+var name = "Pedro";
+if(name == "Pedro") {
+  resolve(name);
+} else {
+reject("Name is not Pedro, name was " + name);
+} 
+});
+
+//event.then().catch()
+
+event.then((name) => {
+  console.log(name)
+}).catch((err) => {
+  console.log(err);
+}).finally(() => {
+  console.log("Promise finished")
+});
